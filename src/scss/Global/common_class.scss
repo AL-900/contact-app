@@ -1,0 +1,9 @@
+.text-primary {
+  color: $green;
+}
+.text-yellow {
+  color: $orange;
+}
+.img-fluid {
+  @include img-fluid();
+}

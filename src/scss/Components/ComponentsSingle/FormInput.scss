@@ -1,0 +1,24 @@
+.formInput {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 50px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  border-radius: 10px;
+  border: 1px solid;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-weight: 700;
+    word-spacing: 5px;
+    font-size: 1.1rem;
+    color: $gray-600;
+    text-transform: capitalize;
+  }
+}

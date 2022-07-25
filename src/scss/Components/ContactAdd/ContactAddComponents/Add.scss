@@ -1,0 +1,44 @@
+.add {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    padding: 10px;
+    @include transition();
+    &:hover {
+      box-shadow: 10px 0 20px -6px rgba(0, 0, 0, 0.78);
+    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .submitBtn {
+      text-align: center;
+      margin: auto;
+      margin-left: 5px;
+      padding: 10px 50px;
+      background-color: $secondary;
+      color: $gray-200;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      @include transition();
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+  h1 {
+    font-weight: 800;
+    color: $primary;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+
+    margin: auto;
+  }
+}

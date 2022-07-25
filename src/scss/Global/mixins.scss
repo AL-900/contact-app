@@ -1,0 +1,112 @@
+// breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin up-sm {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+@mixin up-md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+@mixin up-lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+@mixin up-xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+@mixin down-sm {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+@mixin down-md {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+@mixin down-lg {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+@mixin down-xl {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+@mixin img-fluid {
+  // Part 1: Set a maximum relative to the parent
+  max-width: 100%;
+  // Part 2: Override the height to auto, otherwise images will be stretched
+  // when setting a width and height attribute on the img element.
+  height: auto;
+}
+
+@mixin transition {
+  transition: all 0.5s ease;
+}
+@mixin font-style($clr, $size) {
+  font-size: $size;
+  color: $clr;
+}
+
+@mixin gradient {
+  background: linear-gradient(
+    to right,
+    rgba($primary, 0.95),
+    rgba($secondary, 0.95)
+  );
+}
+
+@mixin section__height {
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+
+  width: 100%;
+
+  @include up-sm {
+    padding-top: 7rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@mixin text__gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, $primary, $secondary);
+}
+@mixin height {
+  min-height: 80vh;
+  @include up-lg {
+    min-height: 100vh;
+  }
+  @include down-lg {
+    padding-bottom: 2rem;
+    padding-top: 8rem;
+  }
+  @include down-md {
+    padding-top: 5rem;
+    min-height: 100vh;
+  }
+}
+
+@mixin text__gradient__custom($clr, $clr2) {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, $clr, $clr2);
+}

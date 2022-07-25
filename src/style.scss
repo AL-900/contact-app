@@ -1,0 +1,35 @@
+@import "./scss/Global/custom.scss";
+
+// ************ Main variables files  ************
+
+@import "./scss/Global/mixins.scss";
+
+// ************ Main Components scss file  which is binding all Component files  ************
+
+@import "./scss/Global/Components.scss";
+
+// ************ global class scss which is apply to full projects ************
+
+@import "./scss/Global/common_class.scss";
+
+//  ************ Main scss which is apply to full projects ************
+
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; //for firefox
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

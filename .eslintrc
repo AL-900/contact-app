@@ -1,0 +1,77 @@
+{
+	"extends": [
+		"airbnb",
+		"airbnb/hooks",
+		"eslint:recommended",
+		"prettier",
+		"plugin:jsx-a11y/recommended"
+	],
+	"root": true,
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 8,
+		"requireConfigFile": false,
+		"ecmaFeatures": {
+			"jsx": true,
+			"js": true
+		},
+		"babelOptions": {
+			"presets": ["@babel/preset-react"]
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"jest": true
+	},
+	"rules": {
+		"react/react-in-jsx-scope": 0,
+		"react-hooks/rules-of-hooks": "error",
+		"no-console": 0,
+		"react/no-unescaped-entities": 0,
+		"react/state-in-constructor": 0,
+		"indent": 0,
+		"linebreak-style": 0,
+		"react/prop-types": 0,
+		"jsx-a11y/click-events-have-key-events": 0,
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+		"prettier/prettier": [
+			"warn",
+			{
+				"semi": true,
+				"trailingComma": "es5",
+				"singleQuote": true,
+				"jsxSingleQuote": false,
+				"printWidth": 80,
+				"tabWidth": 4,
+				"endOfLine": "auto"
+			}
+		],
+		"no-tabs": 0,
+
+		"semi": ["error", "always"],
+
+		"constructor-super": "warn",
+		"valid-typeof": "warn",
+		"no-const-assign": "warn",
+		"no-this-before-super": "warn",
+
+		"no-unused-vars": ["warn", { "vars": "all", "args": "none" }],
+		"no-invalid-regexp": "error",
+		"no-multi-spaces": "warn",
+		"no-multiple-empty-lines": ["warn", { "max": 3 }]
+	},
+	"plugins": ["prettier", "react", "react-hooks", "@babel", "jsx-a11y", "import"]
+}
